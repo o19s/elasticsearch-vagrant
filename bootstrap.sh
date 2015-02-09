@@ -8,3 +8,10 @@ sudo add-apt-repository "deb http://packages.elasticsearch.org/elasticsearch/1.4
 sudo apt-get update
 sudo apt-get install elasticsearch
 sudo update-rc.d elasticsearch defaults 95 10
+
+# Install Elasticsearch plugins
+cd /usr/share/elasticsearch
+sudo bin/plugin -i elasticsearch/marvel/latest
+
+# Install python tools
+sudo apt-get install build-essential autoconf flex bison libtool python-dev -y
