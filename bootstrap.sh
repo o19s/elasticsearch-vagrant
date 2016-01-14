@@ -12,8 +12,3 @@ sudo dpkg -i elasticsearch-2.0.1.deb
 sudo sed -i  '/network.host:/a network.bind_host: _non_loopback_' /etc/elasticsearch/elasticsearch.yml
 sudo update-rc.d elasticsearch defaults 95 10
 sudo /etc/init.d/elasticsearch start
-
-
-# Install Elasticsearch plugins
-cd /usr/share/elasticsearch
-sudo bin/plugin -i elasticsearch/marvel/latest
